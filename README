@@ -1,0 +1,58 @@
+===========================================
+THOUGHT MACHINE
+Programming Test
+===========================================
+
+Consider a square board of size N. Each cell can either be empty or be occupied by a ship. The position of a ship is defined by three parameters: an x-coordinate, a y-coordinate and an orientation (north, east, south, west).
+
+Once the initial state of the board is set up, any number of operations can occur. There are two types of operations:
+
+-- Move a ship
+Specified by an initial coordinate and a series of movements which can be move forward (in the
+direction that ship is facing), rotate left, rotate right.
+A ship can navigate through an occupied cell. However, two ships cannot occupy the same cell at the
+end of a move operation.
+
+Ship cannot move out of the board ( eg. move on (0, 0, S)) in case one of the operations on the ship is illigal, ships stayes without any change
+
+-- Shoot down a ship
+Specified by an x- and y-coordinate. If the cell is occupied, that ship is sunk and the cell can
+be occupied by another ship. If there is no ship, nothing happens.
+
+
+===========================================
+
+- Single ship creation within 1x1 board boundaries with directions: N, E, S, W.
+- Illegal single ship creation outside 1x1 board boundaries.
+- Illegal single ship creation outside 3x3 board boundaries.
+- Ship rotation of 360 degrees (1 full rotation) to the right and to the left.
+- Ship rotation of 720 degrees (2 full rotation) to the right and to the left.
+- Ship rotation and single movement to a new location.
+- Ship rotation and movement with mix of multiple commands.
+- Multiple ship creation in one input line.
+- Ship shoot down.
+- Illegal ship movement outside board's boundaries.
+- Illegal ship movement outside board's boundaries to legal destination location which is within the board boundaries.
+- Illegal ship movement to location of other ships. 
+- Illegal ship shootdown outside board's boundaries. 
+- Ship movement over others ships.
+- Ship shoot down and attempt to rotation and movement of the sunk ship.
+- Attempt on ship shoot down on location without a ship.
+- Movement or rotation command for a location without a ship.
+- Movement ships to the same location and shoot down (with the same direction).
+
+Input file format:
+
+The first line contains the size of the board. 
+The second line contains a list of
+coordinate-and-orientation tuples (initial position of the ships).
+ Any subsequent lines are
+operations: shoot operations (simply coordinates) and move operations (coordinates to specify
+the ship to be considered and a sequence of 'L' (rotate left), 'R' (rotate right) and 'M' (move)).
+
+Output file format:
+
+First lines with existing ships: Ordered by x field first and then y. (eg (0,1),(0,2),(1,0))
+Each line will contain ships coordinates and it's orientation in format (x, y, or).  
+After will follow lines with sunk ships with their last position (x, y, or) SUNK
+

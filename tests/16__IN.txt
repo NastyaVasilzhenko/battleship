@@ -1,0 +1,12 @@
+2
+(0, 1, W) (1, 0, E)
+(0, 1) LLLM
+(1, 0) RRMM
+(1, 0) RRRM
+(0, 1) RRM
+(0, 1) LM
+(1, 1)
+(0, 0) MM
+(0, 0) MLMLM
+(0, 0) RRMMRMRM
+(0, 0) RRRMLML
